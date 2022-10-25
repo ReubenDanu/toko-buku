@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style/login.css">
+    <title>Login Admin</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="../../controller/login.php" method="post" class="form">
+        <div class="header">
+            <span class="logo-form"> <i class="bx bxs-book-bookmark"></i> </span>
+          <p class="text-form">Login Admin Buku.io</p>
+        </div>
+        <label for="username"
+          >Username :<input type="text" name="username" id="username" placeholder="Enter Your Username"/></label
+        >
+        <label for="password"
+          >Password :<input type="password" name="password" id="password" placeholder="Enter Your Password"/></label
+        >
+
+        <button type="submit">Login</button>
+        <div class="option">
+          <span>Belum Punya Account? <a href="./register.html">Sign In</a></span>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

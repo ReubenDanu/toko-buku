@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
+    <link rel="stylesheet" href="../style/style.css" />
+    <!-- Boxiocns CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bxs-book-bookmark"></i>
+        <span class="logo_name">Toko Buku</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link_name">Dashboard</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Dashboard</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-collection"></i>
+              <span class="link_name">Operation's</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Operation's</a></li>
+            <li><a href="./buku.html">Buku</a></li>
+            <li><a href="./distributor.html">Distributor</a></li>
+            <li><a href="./pasok.html">Pasok</a></li>
+            <li><a href="./penjualan.html">Penjualan</a></li>
+            <li><a href="./user.html">User</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-report"></i>
+            <span class="link_name">Laporan</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Laporan</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="link_name">Setting</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Setting</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <!--<img src="image/profile.jpg" alt="profileImg">-->
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Prem Shahi</div>
+              <div class="job">Web Desginer</div>
+            </div>
+            <i class="bx bx-log-out"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div class="home-content">
+        <i class="bx bx-menu"></i>
+        <span class="text">Drop Down Sidebar</span>
+      </div>
+
+      <div class="header">
+        <span>overview</span>
+      </div>
+
+      <div class="section peek-data">
+        <div class="group 1">
+          <span class="data-name">buku</span><span class="data-value">190</span>
+        </div>
+        <div class="group 2">
+          <span class="data-name">distributor</span
+          ><span class="data-value">80</span>
+        </div>
+        <div class="group 3">
+          <span class="data-name">penjualan</span
+          ><span class="data-value">18</span>
+        </div>
+        <div class="group 4">
+          <span class="data-name">pasok</span><span class="data-value">60</span>
+        </div>
+        <div class="group 5">
+          <span class="data-name">user</span><span class="data-value">50</span>
+        </div>
+      </div>
+      <div class="section target">
+        <div class="group 1">
+          <div class="header">
+            <div>
+              <span class="sub-menu">buku</span>
+              <a href="#" class="detail">View Detail's</a>
+            </div>
+            <span class="date">Today</span>
+          </div>
+          <div class="content">
+            <div><span>Top Buku</span><span>Death Note</span></div>
+            <div><span>Top Requested</span><span>One Piece</span></div>
+            <div><span>Top Catagory</span><span>Adventure</span></div>
+            <div><span>Quantity</span><span>70</span></div>
+          </div>
+        </div>
+        <div class="group 2">
+          <div class="header">
+            <div>
+              <span class="sub-menu">penjualan</span>
+              <a href="#" class="detail">View Detail's</a>
+            </div>
+            <span class="date">Today</span>
+          </div>
+          <div class="content">
+            <div><span>Total Penjualan</span><span>30k</span></div>
+            <div><span>Rata-Rata</span><span>5k</span></div>
+            <div><span>Modal</span><span>1.2m</span></div>
+            <div><span>Omset</span><span>400k</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="section"></div>
+    </section>
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
+  </body>
+</html>
