@@ -1,4 +1,3 @@
 progress:
-crud: edit ❌
-auth ❌
-login page❌
+frontend ✅
+backend ✅
