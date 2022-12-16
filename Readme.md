@@ -3,4 +3,4 @@ Project to train CRUD skill
 -simple backend
 -mvc model
 vanilla php
-this project possible due to shcool task
+this project possible due to shcool task.
